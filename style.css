@@ -1,0 +1,97 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    background-color: #FFFBEA; 
+    overflow: hidden;
+    position: relative;
+}
+
+.svg-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg-wrapper svg {
+    display: block;
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 47.98em) {
+    .svg-wrapper svg {
+        max-width: 90%;
+    }
+}
+
+g.surprise-gift {
+    cursor: pointer; 
+    filter: url('#product-dropshadow');
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFEB3B; 
+    z-index: -1;
+    opacity: 0;
+}
+
+.bg.gift-open {
+    animation: fadeOut 3.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#letterContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background: rgba(61, 57, 0, 0.363); 
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    display: none;
+    width: 85vw;
+    height: auto;
+    max-width: 600px;
+}
+
+#letterImage {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#falling-container { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 90;
+}
+
+.flower-piece { 
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#bg-music { position: fixed; bottom: 10px; right: 10px; width: 50px; opacity: 0; pointer-events: none; }
